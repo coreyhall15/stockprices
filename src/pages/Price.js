@@ -9,6 +9,7 @@ console.log(stock)
     <div>
       <h1>
         {stock[0].symbol}
+        <br></br>
         {stock[0].price} 
       </h1>
       
