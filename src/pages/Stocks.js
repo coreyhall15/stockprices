@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+//import stocks from "../data";
 
-const Stock = (props) => {
-    const stock = 
+const Stocks = (props) => {
+    const stocks = 
         [
             {name: "Apple Inc.", symbol: "AAPL", lastPrice: 140.64, change: -0.280000000000001, high: 141.74, low: 140.35, open: 141.5},
             {name: "Microsoft Corporation", symbol: "MSFT", lastPrice: 64.98, change: 0.109999999999999, high: 65.45, low: 64.76, open: 65.12},
@@ -14,8 +15,8 @@ const Stock = (props) => {
 
     return (
         <div className="stock">
-            {stock.map((coin) => {
-                const { name, symbol } = coin;
+            {stocks.map((stock) => {
+                const { symbol, name } = stock;
                 return (
                     <Link to={`/price/${symbol}`}>
                         <h2>{name}</h2>
@@ -26,4 +27,4 @@ const Stock = (props) => {
     );
 };
 
-export default Stock;
+export default Stocks;
